@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YapperTech</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("-_MvGLlVM9KgkNuAe");
+        })();
+    </script>
+    <style>
+        :root {
+            --primary-black: #121212;
+            --secondary-black: #1e1e1e;
+            --primary-purple: #8a2be2;
+            --secondary-purple: #9945e8;
+            --text-white: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-black);
+            color: var(--text-white);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--primary-purple);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 80vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--text-white) 0%, var(--primary-purple) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #b3b3b3;
+        }
+
+        .signup-form {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 2px solid var(--primary-purple);
+            background-color: rgba(30, 30, 30, 0.7);
+            color: var(--text-white);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .signup-form input:focus {
+            border-color: var(--secondary-purple);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .signup-form button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+            color: var(--text-white);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .success-message {
+            margin-top: 20px;
+            color: var(--secondary-purple);
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .purple-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--primary-purple);
+            filter: blur(150px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .glow-1 {
+            top: -100px;
+            right: -50px;
+            animation: floatAnimation 8s infinite alternate;
+        }
+
+        .glow-2 {
+            bottom: -150px;
+            left: -100px;
+            animation: floatAnimation 12s infinite alternate-reverse;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px 0;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatAnimation {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(20px, 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .signup-form input {
+                padding: 12px 15px;
+            }
+
+            .signup-form button {
+                padding: 7px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .signup-form {
+                max-width: 100%;
+            }
+            
+            .signup-form button {
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+                right: auto;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="purple-glow glow-1"></div>
+    <div class="purple-glow glow-2"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">Yapper<span>Tech</span></div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Accelerate your business with AI</h1>
+                <p>Revolutionize your small business growth and efficiency with our cutting-edge AI solutions.</p>
+            </div>
+            
+            <form id="signup-form" class="signup-form">
+                <input type="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit" style="top: 8px;">Sign Up</button>
+                <p id="success-message" class="success-message">We'll be in touch soon!</p>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 YapperTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signup-form');
+            const emailInput = document.getElementById('email');
+            const successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = emailInput.value.trim();
+                if (!email) return;
+                
+                // Store email in localStorage
+                const savedEmails = JSON.parse(localStorage.getItem('yappertech_emails') || '[]');
+                savedEmails.push({
+                    email: email,
+                    timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('yappertech_emails', JSON.stringify(savedEmails));
+                
+                // Show success message
+                emailInput.value = '';
+                successMessage.style.opacity = '1';
+                
+                // Hide message after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.opacity = '0';
+                }, 3000);
+                
+                // Log to console (for demo/debug purposes)
+                console.log('Emails collected:', savedEmails);
+                
+                // Send email using emailjs
+                const templateParams = {
+                    to_email: email,
+                    from_name: email,
+                    message: 'Welcome to YapperTech!'
+                };
+                
+                emailjs.send("service_zp0wgbh", "template_jpie8og", templateParams, "-_MvGLlVM9KgkNuAe")
+                    .then(function(response) {
+                        console.log('Email sent successfully:', response);
+                    })
+                    .catch(function(error) {
+                        console.log('Email sending failed:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
