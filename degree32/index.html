@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree32 - Canonical Fahrenheit ↔ Celsius Conversions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">32°</div>
+                <div class="logo-text">
+                    <h1>Degree32</h1>
+                    <span class="tagline">Defined by standards</span>
+                </div>
+            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">API</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#pricing" class="btn btn-nav">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-badge">Trusted by 10.000+ developers</div>
+                <h2>Canonical Fahrenheit ↔ Celsius conversions for engineers and developers</h2>
+                <p>Precise temperature unit conversions through a standardized REST interface. Built with fixed-point arithmetic for absolute accuracy.</p>
+                <div class="hero-cta">
+                    <a href="get-started.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+                    <a href="documentation.html" class="btn btn-ghost btn-lg">View Documentation</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">99.99%</span>
+                        <span class="stat-label">Uptime SLA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">&lt;10ms</span>
+                        <span class="stat-label">Avg Response</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">1B+</span>
+                        <span class="stat-label">Conversions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="why-fiveninths">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Features</span>
+                    <h2>Why Degree32</h2>
+                    <p>Enterprise-grade temperature conversion with unmatched precision and reliability.</p>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Exactness</h3>
+                        <p>Fixed-point decimal arithmetic eliminates floating-point errors entirely. Every conversion is mathematically precise.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Auditability</h3>
+                        <p>API-key-based access with UUID tracking. Full request/response logging for compliance and debugging.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Determinism</h3>
+                        <p>Identical inputs always yield identical outputs. Perfect for automated systems and reproducible pipelines.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9,12 11,14 15,10"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Standards Compliance</h3>
+                        <p>Adheres to international temperature definitions, including SI standards and ITS-90 scale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">API</span>
+                    <h2>How It Works</h2>
+                    <p>Simple, intuitive REST API. Get started in minutes.</p>
+                </div>
+                <div class="api-example">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">Request</span>
+                        </div>
+                        <pre><code><span class="code-method">GET</span> /api/convert?from=fahrenheit&amp;to=celsius&amp;value=98.6
+<span class="code-header-name">Authorization:</span> Bearer YOUR_API_KEY</code></pre>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">Response</span>
+                        </div>
+                        <pre><code>{
+  <span class="code-key">"input"</span>: {
+    <span class="code-key">"value"</span>: <span class="code-string">"98.6"</span>,
+    <span class="code-key">"unit"</span>: <span class="code-string">"fahrenheit"</span>
+  },
+  <span class="code-key">"output"</span>: {
+    <span class="code-key">"value"</span>: <span class="code-string">"37.0"</span>,
+    <span class="code-key">"unit"</span>: <span class="code-string">"celsius"</span>
+  },
+  <span class="code-key">"request_id"</span>: <span class="code-string">"550e8400-e29b-41d4..."</span>
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Pricing</span>
+                    <h2>Simple, transparent pricing</h2>
+                    <p>Start free, scale as you grow. No hidden fees.</p>
+                </div>
+                <div class="pricing-tiers">
+                    <div class="tier">
+                        <div class="tier-header">
+                            <h3>Individual</h3>
+                            <p class="tier-desc">For hobbyists and small projects</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-amount">Free</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                1,000 conversions/month
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Standard rounding
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Community support
+                            </li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-secondary btn-block">Get Started</a>
+                    </div>
+                    <div class="tier featured">
+                        <div class="tier-badge">Most Popular</div>
+                        <div class="tier-header">
+                            <h3>Professional</h3>
+                            <p class="tier-desc">For growing teams and businesses</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                100,000 conversions/month
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Configurable rounding
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Priority support
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Advanced analytics
+                            </li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-primary btn-block">Subscribe</a>
+                    </div>
+                    <div class="tier">
+                        <div class="tier-header">
+                            <h3>Enterprise</h3>
+                            <p class="tier-desc">For large-scale deployments</p>
+                        </div>
+                        <div class="price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Unlimited conversions
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Dedicated support
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                Custom SLA
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>
+                                On-premise option
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary btn-block">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to get started?</h2>
+                <p>Join thousands of developers using Degree32 for precise temperature conversions.</p>
+                <a href="get-started.html" class="btn btn-white btn-lg">Create Free Account</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">32°</div>
+                        <div class="logo-text">
+                            <h1>Degree32</h1>
+                        </div>
+                    </div>
+                    <p>Precision temperature conversions for the modern web.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="documentation.html">Documentation</a>
+                        <a href="status.html">API Status</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Degree32. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
